@@ -1,0 +1,125 @@
+:root {
+  --text: #444;
+  --link: #A83510;
+  --back: #FEC;
+
+  --logo: 48px;
+
+  --xl: 2.4rem;
+  --l: 1.8rem;
+  --m: 1.2rem;
+  --s: 0.6rem;
+  --xs: 0.3rem;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("Ubuntu Light"),
+    local("Ubuntu-Light"),
+    url("fonts/Ubuntu-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Ubuntu Bold"),
+    local("Ubuntu-Bold"),
+    url("fonts/Ubuntu-Bold.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  outline: 0;
+  border: 0;
+  padding: 0;
+
+  color: var(--text);
+  background-color: var(--back);
+  -webkit-tap-highlight-color: transparent;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  line-height: 125%;
+}
+
+body {
+  margin: var(--m);
+  margin-bottom: var(--xl);
+  font-size: var(--m);
+}
+
+.content {
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--xl);
+}
+
+ul {
+  list-style-type: square;
+  padding-left: var(--m);
+}
+
+li {
+  padding-bottom: var(--xs);
+}
+
+li::marker {
+  color: var(--link);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--link);
+  transition: all 0.2s;
+}
+
+a:hover,
+a:active {
+  color: var(--back);
+  background-color: var(--link);
+}
+
+h1,
+h2,
+b {
+  font-weight: 700;
+}
+
+.header {
+  height: var(--logo);
+  display: flex;
+  align-items: center;
+  gap: var(--m);
+}
+
+.logo {
+  flex: none;
+  width: var(--logo);
+  height: var(--logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("icons/wb.png")
+}
+
+h1 {
+  flex: auto;
+  font-size: var(--xl);
+}
+
+h2 {
+  font-size: var(--l);
+  padding-bottom: var(--s);
+}
